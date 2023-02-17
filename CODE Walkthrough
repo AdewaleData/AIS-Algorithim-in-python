@@ -1,0 +1,39 @@
+Artificial Immune Systems (AIS) Algorithm
+Artificial Immune Systems (AIS) are a class of optimization algorithms inspired by the behavior of the immune system in the human body. In AIS, the immune system is modeled as a collection of components such as antigens, antibodies, and lymphocytes that interact with each other to recognize and respond to foreign objects (i.e., pathogens). The goal of AIS is to use these principles to solve optimization problems by representing solutions as antigens and using antibodies and lymphocytes to search the solution space.
+
+The AIS algorithm has several parameters that need to be defined by the user, including the number of antigens, the number of antibodies, the mutation rate, and the selection mechanism.
+
+Here are the key steps of the AIS algorithm:
+
+Initialize the population of antibodies and antigens.
+
+Repeat the following for a fixed number of iterations:
+
+a. For each antibody, calculate its affinity to each antigen.
+
+b. Select a set of antibodies based on their affinity to the antigens.
+
+c. Generate new antibodies by randomly mutating the selected antibodies.
+
+d. Update the population of antibodies based on the affinity of the new antibodies to the antigens.
+
+e. If a stopping criterion is met, exit the loop and return the best solution found so far.
+
+AIS Code Explanation
+Now let's walk through the Python code for the AIS algorithm and explain each part:
+
+Define the problem function: This function takes as input the position of an antigen and returns its fitness value. In this example, the problem is to find the minimum of the function f(x) = sin(x)/x on the interval [0, 10].
+
+Define the AIS parameters: Here we define the number of antigens, the number of antibodies, the mutation rate, and the selection mechanism.
+
+Define the AIS functions:
+
+a. Initialize population: This function generates a population of antigens and antibodies. The antigens are randomly generated within the solution space, and the antibodies are randomly generated around the antigens.
+
+b. Calculate affinity: This function calculates the affinity of an antibody to an antigen. In this example, the affinity is the negative of the absolute difference between the antibody and antigen positions.
+
+c. Select antibodies: This function selects a set of antibodies based on their affinity to the antigens. In this example, we use the roulette wheel selection method, where the probability of selecting an antibody is proportional to its affinity.
+
+d. Mutate antibodies: This function generates new antibodies by randomly mutating the selected antibodies. In this example, we use a Gaussian mutation operator, where the mutation amount is drawn from a normal distribution with mean 0 and standard deviation equal to the mutation rate times the range of the solution space.
+
+e. Update population: This function updates the population of antibodies based on the affinity of the new antibodies to the antigens. 
